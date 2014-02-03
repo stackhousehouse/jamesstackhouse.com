@@ -1,0 +1,186 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/typography";
+@import "compass/typography/vertical_rhythm";
+@import "compass/utilities/general/clearfix";
+@include establish-baseline;
+
+// typography settings
+$base-font-size: 14px;
+$base-line-height: 6px;
+
+// Media queries breakpoints
+// --------------------------------------------------
+$screen-xs:                  480px;
+$screen-sm:                  768px;
+$screen-md:                  992px;
+$screen-lg:                  1200px;
+
+html {
+  @include adjust-font-size-to(12px);
+  @include adjust-leading-to(4);
+  @media (min-width: $screen-sm){
+  	@include adjust-font-size-to(14px);
+  	@include adjust-leading-to(4);
+  }
+}
+
+body{
+	font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, Sans;
+	// font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+	font-weight: 400;
+	font-style: normal;
+	color: #333
+}
+
+
+// header
+header{
+	h1{
+		font-family: 'Tungsten A', 'Tungsten B'; 
+		font-weight: 400; 
+		font-style: normal;
+		font-size: 18px;
+		text-transform: uppercase;
+		border: 2px solid #222;
+		line-height: 1em;
+		color: #fff;
+		background: #222;
+		letter-spacing: 1px;
+		display: inline-block;
+		padding: 6px 4px 6px 6px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		&:hover{
+			color: #fff;
+			background: #d21515;
+			border-color: #d21515;
+		}
+		@media (min-width: $screen-sm){
+			font-size: 32px;
+			top: 16px;
+			left: 16px;
+		}
+		
+	}
+}
+
+
+// banner
+#project-banner{
+	.banner-content{
+		position: relative;
+		width: 100%;
+		max-width: 640px;
+		margin: 0 auto;
+	}
+	h1{
+		font-family: 'Tungsten A', 'Tungsten B'; 
+		font-weight: 400; 
+		font-style: normal;
+		font-size: 42px;
+		color: #333;
+		letter-spacing: 1px;
+		line-height: 1em;
+		padding: 16px;
+		@media (min-width: $screen-sm){
+			font-size: 92px;
+			position: absolute;
+			padding: 0;
+			bottom: 16px;
+			left: 0px;
+			color: #fff;
+		}
+	}
+	img{
+		width: 100%;
+	}
+}
+
+
+
+
+
+// content
+.content{
+	section, figcaption{
+		width: 100%;
+		max-width: 640px;
+		margin: 0 auto;
+		padding: 0 16px;
+		box-sizing: border-box;
+		@media (min-width: $screen-sm){
+			padding: 0;
+		}
+	}
+	figure{
+	text-align: center;
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+		figcaption{
+			margin: rhythm(1, 14px) auto rhythm(8, 14px);	
+			text-align: left;
+		}
+	}
+	// project info
+	section.meta{
+		color: #bbb;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		@include clearfix;
+		a{
+			font-family: 'Tungsten A', 'Tungsten B'; 
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: #bbb;
+			text-decoration: none;
+			@include adjust-font-size-to(18px);
+			border: 2px solid #bbb;
+			padding-left: 5px;
+			padding-right: 4px;
+			margin-bottom: 16px;
+			display: inline-block;
+			&:hover{
+				background: #999;
+				border-color: #999;
+				color: #fff;
+			}
+			@media (min-width: $screen-sm){
+				float: right;
+			}
+		}
+		dl{
+			@include adjust-font-size-to(11px);
+			@media (min-width: $screen-sm){
+				float: left;
+			}
+		}
+		dd{
+			display: inline
+		}
+		dt{
+			font-weight: 700;
+			font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			display: inline;
+			&:before{
+				content: "";
+				display: block;
+				clear: both;
+			}
+		}
+	}
+}
+	
+p{
+	margin: rhythm(1, 14px) auto rhythm(2, 14px);
+}
