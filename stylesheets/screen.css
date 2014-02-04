@@ -67,26 +67,63 @@ html {
   font-size: 16px;
   line-height: 1.5em; }
 
-/* line 23, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 html {
   font-size: 0.85714em;
   line-height: 1.5em;
   line-height: 1.71429em; }
   @media (min-width: 768px) {
-    /* line 23, ../sass/screen.scss */
+    /* line 25, ../sass/screen.scss */
     html {
       font-size: 1em;
       line-height: 1.28571em;
       line-height: 1.71429em; } }
 
-/* line 32, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 body {
   font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, Sans;
   font-weight: 400;
   font-style: normal;
-  color: #333333; }
+  color: #333;
+  -webkit-font-smoothing: antialiased; }
 
-/* line 43, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
+a {
+  color: #ff3c48;
+  font-weight: 700;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s; }
+  /* line 49, ../sass/screen.scss */
+  a:hover {
+    color: #5ed2b5; }
+
+/* line 55, ../sass/screen.scss */
+p {
+  margin: 0.42857em auto 0.85714em; }
+
+/* line 58, ../sass/screen.scss */
+h3 {
+  text-transform: uppercase;
+  font-size: 1.71429em;
+  line-height: 1.25em;
+  font-weight: 400;
+  text-align: left;
+  font-family: 'Tungsten A', 'Tungsten B';
+  padding: 16px 16px 0 8px;
+  letter-spacing: 2px;
+  color: #1bb0c4; }
+  @media (min-width: 768px) {
+    /* line 58, ../sass/screen.scss */
+    h3 {
+      padding: 16px 16px 0 16px; } }
+
+/* line 75, ../sass/screen.scss */
 header h1 {
   font-family: 'Tungsten A', 'Tungsten B';
   font-weight: 400;
@@ -102,26 +139,77 @@ header h1 {
   padding: 6px 4px 6px 6px;
   position: absolute;
   top: 0;
-  left: 0; }
-  /* line 59, ../sass/screen.scss */
+  left: 0;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s; }
+  /* line 93, ../sass/screen.scss */
   header h1:hover {
     color: #fff;
     background: #d21515;
     border-color: #d21515; }
   @media (min-width: 768px) {
-    /* line 43, ../sass/screen.scss */
+    /* line 75, ../sass/screen.scss */
     header h1 {
       font-size: 32px;
       top: 16px;
       left: 16px; } }
 
-/* line 76, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
+#home-banner {
+  padding-top: 72px;
+  padding-bottom: 32px;
+  font-size: 1em;
+  line-height: 1.28571em;
+  background: #17253f;
+  color: #fff; }
+  @media (min-width: 768px) {
+    /* line 108, ../sass/screen.scss */
+    #home-banner {
+      font-size: 1.14286em;
+      line-height: 1.5em; } }
+  /* line 119, ../sass/screen.scss */
+  #home-banner .banner-content {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+    padding: 16px;
+    box-sizing: border-box; }
+    @media (min-width: 768px) {
+      /* line 119, ../sass/screen.scss */
+      #home-banner .banner-content {
+        padding: 0; } }
+  /* line 131, ../sass/screen.scss */
+  #home-banner h1 {
+    font-family: 'Tungsten A', 'Tungsten B';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.71429em;
+    line-height: 1.10526em;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin-bottom: 0.15789em; }
+    @media (min-width: 768px) {
+      /* line 131, ../sass/screen.scss */
+      #home-banner h1 {
+        font-size: 4.57143em;
+        line-height: 1.125em; } }
+
+/* line 148, ../sass/screen.scss */
 #project-banner .banner-content {
   position: relative;
   width: 100%;
   max-width: 640px;
   margin: 0 auto; }
-/* line 82, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 #project-banner h1 {
   font-family: 'Tungsten A', 'Tungsten B';
   font-weight: 400;
@@ -132,7 +220,7 @@ header h1 {
   line-height: 1em;
   padding: 16px; }
   @media (min-width: 768px) {
-    /* line 82, ../sass/screen.scss */
+    /* line 154, ../sass/screen.scss */
     #project-banner h1 {
       font-size: 92px;
       position: absolute;
@@ -140,11 +228,11 @@ header h1 {
       bottom: 16px;
       left: 0px;
       color: #fff; } }
-/* line 100, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 #project-banner img {
   width: 100%; }
 
-/* line 111, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .content section, .content figcaption {
   width: 100%;
   max-width: 640px;
@@ -152,28 +240,28 @@ header h1 {
   padding: 0 16px;
   box-sizing: border-box; }
   @media (min-width: 768px) {
-    /* line 111, ../sass/screen.scss */
+    /* line 183, ../sass/screen.scss */
     .content section, .content figcaption {
       padding: 0; } }
-/* line 121, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 .content figure {
   text-align: center; }
-  /* line 123, ../sass/screen.scss */
+  /* line 195, ../sass/screen.scss */
   .content figure img {
     max-width: 100%;
     height: auto; }
-  /* line 127, ../sass/screen.scss */
+  /* line 199, ../sass/screen.scss */
   .content figure figcaption {
     margin: 0.42857em auto 3.42857em;
     text-align: left; }
-/* line 133, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .content section.meta {
   color: #bbb;
   padding-top: 16px;
   padding-bottom: 16px;
   overflow: hidden;
   *zoom: 1; }
-  /* line 138, ../sass/screen.scss */
+  /* line 210, ../sass/screen.scss */
   .content section.meta a {
     font-family: 'Tungsten A', 'Tungsten B';
     font-weight: 400;
@@ -188,39 +276,112 @@ header h1 {
     padding-right: 4px;
     margin-bottom: 16px;
     display: inline-block; }
-    /* line 151, ../sass/screen.scss */
+    /* line 223, ../sass/screen.scss */
     .content section.meta a:hover {
-      background: #999;
-      border-color: #999;
+      background: #ff3c48;
+      border-color: #ff3c48;
       color: #fff; }
     @media (min-width: 768px) {
-      /* line 138, ../sass/screen.scss */
+      /* line 210, ../sass/screen.scss */
       .content section.meta a {
         float: right; } }
-  /* line 160, ../sass/screen.scss */
+  /* line 232, ../sass/screen.scss */
   .content section.meta dl {
     font-size: 0.78571em;
     line-height: 1.63636em; }
     @media (min-width: 768px) {
-      /* line 160, ../sass/screen.scss */
+      /* line 232, ../sass/screen.scss */
       .content section.meta dl {
         float: left; } }
-  /* line 166, ../sass/screen.scss */
+  /* line 238, ../sass/screen.scss */
   .content section.meta dd {
     display: inline; }
-  /* line 169, ../sass/screen.scss */
+  /* line 241, ../sass/screen.scss */
   .content section.meta dt {
     font-weight: 700;
     font-family: 'Vitesse SSm A', 'Vitesse SSm B';
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline; }
-    /* line 175, ../sass/screen.scss */
+    /* line 247, ../sass/screen.scss */
     .content section.meta dt:before {
       content: "";
       display: block;
       clear: both; }
 
-/* line 184, ../sass/screen.scss */
-p {
-  margin: 0.42857em auto 0.85714em; }
+/* line 262, ../sass/screen.scss */
+.content.list section {
+  max-width: 1280px; }
+/* line 265, ../sass/screen.scss */
+.content.list article {
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+  padding: 4px; }
+  /* line 270, ../sass/screen.scss */
+  .content.list article img {
+    max-width: 100%;
+    height: auto; }
+  /* line 274, ../sass/screen.scss */
+  .content.list article h1 {
+    font-family: 'Tungsten A', 'Tungsten B';
+    font-weight: 400;
+    font-size: 1.71429em;
+    line-height: 1.25em;
+    margin-bottom: 0.25em;
+    margin-left: 0.25em; }
+  /* line 281, ../sass/screen.scss */
+  .content.list article a {
+    text-decoration: none;
+    color: #444;
+    display: block;
+    border: 4px solid #e3f8fb; }
+    /* line 286, ../sass/screen.scss */
+    .content.list article a:hover {
+      color: #ff3c48;
+      border-color: #ff3c48; }
+      /* line 289, ../sass/screen.scss */
+      .content.list article a:hover img {
+        -webkit-filter: grayscale(100%); }
+  @media (min-width: 768px) {
+    /* line 265, ../sass/screen.scss */
+    .content.list article {
+      width: 50%;
+      padding: 16px; } }
+  @media (min-width: 992px) {
+    /* line 265, ../sass/screen.scss */
+    .content.list article {
+      width: 33.3333%;
+      padding: 16px; } }
+  @media (min-width: 1200px) {
+    /* line 265, ../sass/screen.scss */
+    .content.list article {
+      width: 33.3333%;
+      padding: 16px; } }
+
+/* line 10, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%; }
+
+/* line 12, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#root {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -54px; }
+  /* line 18, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+  #root #root_footer {
+    height: 54px; }
+
+/* line 20, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#footer {
+  clear: both;
+  position: relative;
+  height: 54px; }
+
+/* line 311, ../sass/screen.scss */
+#footer {
+  font-size: 10px;
+  padding: 16px;
+  margin-top: 24px; }

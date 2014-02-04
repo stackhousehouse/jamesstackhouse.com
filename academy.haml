@@ -1,0 +1,164 @@
+!!! 5
+
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+-# <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+-# <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+-# <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+-# <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+%html.no-js{:lang => "en"}
+
+    %head
+
+        -# ==========================================================================
+        -# Head
+        -# ==========================================================================
+
+        %meta{:charset => "utf-8"}
+
+        %title BBC Academy | James Stackhouse
+        %meta{:name => "description", :content => ""}
+        -# %meta{:name => "keywords", :content => ""}
+        -# %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        -# ==========================================================================
+
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+        -# %meta{:name => "HandheldFriendly", :content => "True"}
+        -# %meta{:name => "MobileOptimized", :content => "320"}
+
+        -# iOS web app
+
+        -# %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
+        -# %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
+        -# %link{:rel => "apple-touch-startup-image", :href => "/img/touch/startup.png"}
+
+        -# RSS
+        -# ==========================================================================
+
+        -# %link{:rel => "alternate", :type => "application/rss+xml", :title => "RSS", :href => "http://feeds.feedburner.com/FEEDNAME"}
+
+        -# Favicon
+        -# ==========================================================================
+
+        %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+
+        -# iPad 3 Retina Display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "144x144", :href => "/img/touch/apple-touch-icon-144x144-precomposed.png"}
+
+        -# iPhone 4 Retina display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "114x114", :href => "/img/touch/apple-touch-icon-114x114-precomposed.png"}
+
+        -# iPad non-Retina display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "72x72", :href => "/img/touch/apple-touch-icon-72x72-precomposed.png"}
+
+        -# Non-Retina iPhone, iPod Touch, Android 2.1+
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :href => "/img/touch/apple-touch-icon-57x57-precomposed.png"}
+
+        -# Nokia
+
+        -# %link{:rel => "shortcut icon", :href => "/img/touch/apple-touch-icon.png"}
+
+        -# CSS
+        -# ==========================================================================
+
+        %link{:rel => "stylesheet", :href => "//cloud.typography.com/7131052/621764/css/fonts.css"}
+        %link{:rel => "stylesheet", :href => "stylesheets/screen.css"}
+        -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "/css/widescreen.css"}
+
+        -# IE Fixes
+        -# ==========================================================================
+
+        -#
+        -# Use HTML5 Shim polyfill if not using Modernizr
+        -# Compiled IE stylesheets for legacy IE "Mobile first" support (using SASS)
+        -# nicolasgallagher.com/mobile-first-css-sass-and-ie/
+        -#
+
+        -# /[if (lt IE 9) & (!IEMobile)]
+            -# %script{:src => "//html5shim.googlecode.com/svn/trunk/html5.js"}
+            -# %script{:src => "/js/libs/selectivizr.min.js"}
+            -# %link{:rel => "stylesheet", :href => "/css/oldie.css"}
+            -# %link{:rel => "stylesheet", :href => "/css/ie8.css"}
+
+        -# [if (lt IE 8) & (!IEMobile)]
+            %link{:rel => "stylesheet", :href => "/stylesheets/ie.css"}
+
+        -# [if IE 6 & (!IEMobile)]
+            %link{:rel => "stylesheet", :href => "/stylesheets/ie.css"}
+
+        -# JS
+        -# ==========================================================================
+
+    %body
+
+        -# ==========================================================================
+        -# Content
+        -# ==========================================================================
+
+        -# = yield
+        %header
+            %a{href:"/"}
+                %h1
+                    Stack
+                    %br
+                    House
+        %section#project-banner
+            %img{src:"images/academy-banner-2.jpg"}
+            .banner-content
+                %h1 BBC Academy
+        .content
+            %section.meta
+                %a{href:"bbc.co.uk/academy"} View Project
+                %dl
+                    %dt Role:
+                    %dd Design lead.
+                    %dd Front-end development.
+                    %dt Agency:
+                    %dd Picture Ltd.
+            %section
+                %p The BBC Academy is tasked to provide training and development to its staff and the wider industry, through the colleges of Journalism, Production and Technology.
+                %p Previously the colleges ran their own separate websites and many people were unaware of the purpose of the academy as a whole.
+                %p We were challenged with creating a publishing platform that would bring the colleges together into one presence; that would respect the content differences from each college, support many languages, work beautifully across all devices, and provide a cohesive experience for the audience.
+            %figure
+                %img{src: "images/academy2.png"}
+                %figcaption
+                    The redesign gave a voice to the Academy as a whole. The homepage team is now able to highlight content from any of the colleges or create its own, showcasing the depth and breadth of what the Academy does. 
+            %figure
+                %img{src: "images/academy3.png"}
+                %figcaption
+                    Editors are able to promote content in the navigation at the college and category level. We used a panel-based approach to display the large variety of categories and subcategories throughout the colleges to reduce the need to click through to category pages.
+            %figure
+                %img{src: "images/academy4.png"}
+                %figcaption
+                    The panel-based navigation continues on mobile devices.
+            %figure
+                %img{src: "images/academy5.png"}
+                %figcaption
+                    Colour themes separate the colleges within the Academy.
+            %figure
+                %img{src: "images/academy6.png"}
+                %figcaption
+                    Content can be featured on category and content lists.
+            %figure
+                %img{src: "images/academy7.png"}
+                %figcaption
+                    This was one of the first BBC websites to be fully responsive, utilizing the new BBC Orb headers. Article pages are completely content-focussed. Only minimal category information is diplayed alongside them. Articles may feature images, videos or podcasts.
+            %figure
+                %img{src: "images/academy8.png"}
+                %figcaption
+                    The simple content focus allowed us to support multiple languages with ease. The Academy currently supports Arabic, Burmese, Chinese simplified, Chinese traditional, Hausa, Persian, Pashto, Russian, Swahili, Urdu, and Vietnamese.
+        %footer#footer
+            %small © 2014 \ James Stackhouse       
+        
+        -# :javascript
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
