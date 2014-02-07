@@ -18,7 +18,7 @@
         %meta{:charset => "utf-8"}
 
         %title BBC Academy | James Stackhouse
-        %meta{:name => "description", :content => ""}
+        %meta{:name => "description", :content => "BBC Academy design and front end development"}
         -# %meta{:name => "keywords", :content => ""}
         -# %meta{:name => "author", :content => ""}
 
@@ -95,7 +95,9 @@
 
         -# JS
         -# ==========================================================================
-
+        :javascript
+            document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';
+            
     %body
 
         -# ==========================================================================
@@ -154,11 +156,47 @@
                 %img{src: "images/academy8.png"}
                 %figcaption
                     The simple content focus allowed us to support multiple languages with ease. The Academy currently supports Arabic, Burmese, Chinese simplified, Chinese traditional, Hausa, Persian, Pashto, Russian, Swahili, Urdu, and Vietnamese.
+        .content.list.continue
+            %section
+                %h3 Selected Work
+                %article
+                    %a{href:"academy.html"}
+                        %img{src:"images/academy-thumb.jpg", alt: "BBC Academy"}
+                        %h1 BBC Academy
+                %article
+                    %a{href:"gel.html"}
+                        %img{src:"images/gel-thumb.jpg", alt: "BBC GEL"}
+                        %h1 BBC GEL
+                %article
+                    %a{href:"awm.html"}
+                        %img{src:"images/awm-thumb.jpg", alt: "Australian War Memorial, London"}
+                        %h1 Australian War Memorial, London
+                %article
+                    %a{href:"fahan.html"}
+                        %img{src:"images/fahan-thumb.jpg", alt: "Fahan School"}
+                        %h1 Fahan School
+                %article
+                    %a{href:"mmft.html"}
+                        %img{src:"images/mmft-thumb.jpg", alt: "BBC Major Music Festivals"}
+                        %h1 BBC Major Music Festivals
+                %article
+                    %a{href:"listening.html"}
+                        %img{src:"images/listen-thumb.jpg", alt: "BBC Listening Project"}
+                        %h1 BBC Listening Project
         %footer#footer
             %small © 2014 \ James Stackhouse       
         
-        -# :javascript
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        -# jQuery
+
+        %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+        :javascript
+            window.jQuery || document.write('<script src="/js/jquery-1.7.2.min.js"><\/script>')
+
+        -# Custom JS
+        %script{:src => "/js/app-ck.js"}
+        
+        :javascript
+            var _gaq=[['_setAccount','UA-47537665-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));

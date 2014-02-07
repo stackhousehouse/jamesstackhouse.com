@@ -1,0 +1,1 @@
+$(window).scroll(function(){var e=$(window).scrollTop()/2;$("#project-banner img").css({"-webkit-filter":"grayscale("+e+"%)",filter:"grayscale("+e+"%)"})});

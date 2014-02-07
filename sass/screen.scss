@@ -59,7 +59,7 @@ h3{
 	text-transform: uppercase;
 	@include adjust-font-size-to(24px);
 	font-weight: 400;
-	text-align: left;
+	text-align: center;
 	font-family: 'Tungsten A', 'Tungsten B'; 
 	padding: 16px 16px 0 8px;
 	letter-spacing: 2px;
@@ -88,12 +88,13 @@ header{
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index:99;
 		@include transition-property(all);
   		@include transition-duration(0.25s);
 		&:hover{
 			color: #fff;
-			background: #d21515;
-			border-color: #d21515;
+			background: #ff3c48;
+			border-color: #ff3c48;
 		}
 		@media (min-width: $screen-sm){
 			font-size: 32px;
@@ -106,7 +107,7 @@ header{
 
 // home banner
 #home-banner{
-	padding-top: 72px;
+	padding-top: 88px;
 	padding-bottom: 32px;
 	@include adjust-font-size-to(14px);
 	@media (min-width: $screen-sm){
@@ -123,6 +124,8 @@ header{
 		margin: 0 auto;
 		font-family: 'Vitesse SSm A', 'Vitesse SSm B';
 		padding: 16px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		@media (min-width: $screen-sm){
 			padding: 0;
@@ -145,6 +148,7 @@ header{
 
 // banner
 #project-banner{
+	// background: #17253f;
 	.banner-content{
 		position: relative;
 		width: 100%;
@@ -171,6 +175,8 @@ header{
 	}
 	img{
 		width: 100%;
+		@include transition-property(all);
+  		@include transition-duration(0.5s);
 	}
 }
 
@@ -185,6 +191,8 @@ header{
 		max-width: 640px;
 		margin: 0 auto;
 		padding: 0 16px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		@media (min-width: $screen-sm){
 			padding: 0;
@@ -228,11 +236,19 @@ header{
 			@media (min-width: $screen-sm){
 				float: right;
 			}
+			&.multi{
+				float:none;
+				margin-bottom: 0;
+				margin-top: 16px;
+			}
 		}
 		dl{
 			@include adjust-font-size-to(11px);
 			@media (min-width: $screen-sm){
 				float: left;
+				&.multi{
+					float:none;
+				}
 			}
 		}
 		dd{
@@ -264,6 +280,8 @@ header{
 	}
 	article{
 		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		float: left;
 		padding: 4px;
@@ -276,7 +294,10 @@ header{
 			font-weight: 400;
 			@include adjust-font-size-to(24px);
 			margin-bottom: rhythm(1, 24px);
-			margin-left: rhythm(1, 24px);
+			padding-left: rhythm(1, 24px);
+			padding-top: rhythm(1, 24px);
+			margin-top: - rhythm(1, 20px);
+			border-top: 4px solid lighten(#1bb0c4, 50%);
 		}
 		a{
 			text-decoration: none;
@@ -288,6 +309,9 @@ header{
 				border-color: #ff3c48;
 				img{
 					-webkit-filter: grayscale(100%);
+				}
+				h1{
+					border-color: #ff3c48;
 				}
 			}
 		}
@@ -304,6 +328,13 @@ header{
 			padding: 16px;
 		}
 	}
+}
+
+// continue lists
+.content.list.continue{
+	@include clearfix;
+	margin-top:24px;
+	border-top: 4px solid lighten(#1bb0c4, 50%);
 }
 
 // footer

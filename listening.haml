@@ -1,0 +1,179 @@
+!!! 5
+
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+-# <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+-# <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+-# <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+-# <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+%html.no-js{:lang => "en"}
+
+    %head
+
+        -# ==========================================================================
+        -# Head
+        -# ==========================================================================
+
+        %meta{:charset => "utf-8"}
+
+        %title BBC Listening Project | James Stackhouse
+        %meta{:name => "description", :content => "BBC Listening Project design and front-end development."}
+        -# %meta{:name => "keywords", :content => ""}
+        -# %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        -# ==========================================================================
+
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+        -# %meta{:name => "HandheldFriendly", :content => "True"}
+        -# %meta{:name => "MobileOptimized", :content => "320"}
+
+        -# iOS web app
+
+        -# %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
+        -# %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
+        -# %link{:rel => "apple-touch-startup-image", :href => "/img/touch/startup.png"}
+
+        -# RSS
+        -# ==========================================================================
+
+        -# %link{:rel => "alternate", :type => "application/rss+xml", :title => "RSS", :href => "http://feeds.feedburner.com/FEEDNAME"}
+
+        -# Favicon
+        -# ==========================================================================
+
+        %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+
+        -# iPad 3 Retina Display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "144x144", :href => "/img/touch/apple-touch-icon-144x144-precomposed.png"}
+
+        -# iPhone 4 Retina display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "114x114", :href => "/img/touch/apple-touch-icon-114x114-precomposed.png"}
+
+        -# iPad non-Retina display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "72x72", :href => "/img/touch/apple-touch-icon-72x72-precomposed.png"}
+
+        -# Non-Retina iPhone, iPod Touch, Android 2.1+
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :href => "/img/touch/apple-touch-icon-57x57-precomposed.png"}
+
+        -# Nokia
+
+        -# %link{:rel => "shortcut icon", :href => "/img/touch/apple-touch-icon.png"}
+
+        -# CSS
+        -# ==========================================================================
+
+        %link{:rel => "stylesheet", :href => "//cloud.typography.com/7131052/621764/css/fonts.css"}
+        %link{:rel => "stylesheet", :href => "stylesheets/screen.css"}
+        -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "/css/widescreen.css"}
+
+        -# IE Fixes
+        -# ==========================================================================
+
+        -#
+        -# Use HTML5 Shim polyfill if not using Modernizr
+        -# Compiled IE stylesheets for legacy IE "Mobile first" support (using SASS)
+        -# nicolasgallagher.com/mobile-first-css-sass-and-ie/
+        -#
+
+        -# /[if (lt IE 9) & (!IEMobile)]
+            -# %script{:src => "//html5shim.googlecode.com/svn/trunk/html5.js"}
+            -# %script{:src => "/js/libs/selectivizr.min.js"}
+            -# %link{:rel => "stylesheet", :href => "/css/oldie.css"}
+            -# %link{:rel => "stylesheet", :href => "/css/ie8.css"}
+
+        -# [if (lt IE 8) & (!IEMobile)]
+            %link{:rel => "stylesheet", :href => "/stylesheets/ie.css"}
+
+        -# [if IE 6 & (!IEMobile)]
+            %link{:rel => "stylesheet", :href => "/stylesheets/ie.css"}
+
+        -# JS
+        -# ==========================================================================
+        :javascript
+            document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';
+            
+    %body
+
+        -# ==========================================================================
+        -# Content
+        -# ==========================================================================
+
+        -# = yield
+        %header
+            %a{href:"/"}
+                %h1
+                    Stack
+                    %br
+                    House
+        %section#project-banner
+            %img{src:"images/listen-banner.jpg"}
+            .banner-content
+                %h1 BBC Listening Project
+        .content
+            %section.meta
+                %a{href:"http://www.bbc.co.uk/radio4/features/the-listening-project"} View Project
+                %dl
+                    %dt Role:
+                    %dd Design.
+                    %dd Font-end.
+                    %dt Agency:
+                    %dd Picture Ltd.
+            %section
+                %p The Listening Project was a delightful collaboration between BBC and the British Library to capture the oral histories of folk throughout the UK. The stories were played on BBC local radio stations and archived by the British Library as a snapshot of our times.
+                %p Users were guided through the recording, interviewing an upload process.
+                %p It had an overwhelming response with some beautiful stories submitted.
+            %figure
+                %img{src: "images/listen.png"}
+            %figure
+                %img{src: "images/listen2.png"}
+            
+        .content.list.continue
+            %section
+                %h3 Selected Work
+                %article
+                    %a{href:"academy.html"}
+                        %img{src:"images/academy-thumb.jpg", alt: "BBC Academy"}
+                        %h1 BBC Academy
+                %article
+                    %a{href:"gel.html"}
+                        %img{src:"images/gel-thumb.jpg", alt: "BBC GEL"}
+                        %h1 BBC GEL
+                %article
+                    %a{href:"awm.html"}
+                        %img{src:"images/awm-thumb.jpg", alt: "Australian War Memorial, London"}
+                        %h1 Australian War Memorial, London
+                %article
+                    %a{href:"fahan.html"}
+                        %img{src:"images/fahan-thumb.jpg", alt: "Fahan School"}
+                        %h1 Fahan School
+                %article
+                    %a{href:"mmft.html"}
+                        %img{src:"images/mmft-thumb.jpg", alt: "BBC Major Music Festivals"}
+                        %h1 BBC Major Music Festivals
+                %article
+                    %a{href:"listening.html"}
+                        %img{src:"images/listen-thumb.jpg", alt: "BBC Listening Project"}
+                        %h1 BBC Listening Project        
+        %footer#footer
+            %small © 2014 \ James Stackhouse       
+        
+        -# jQuery
+
+        %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+        :javascript
+            window.jQuery || document.write('<script src="/js/jquery-1.7.2.min.js"><\/script>')
+
+        -# Custom JS
+        %script{:src => "/js/app-ck.js"}
+
+        :javascript
+            var _gaq=[['_setAccount','UA-47537665-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
