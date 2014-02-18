@@ -51,6 +51,17 @@ a{
 	}
 }
 
+i,em{
+	font-style: italic;
+}
+b,strong{
+	font-weight: bold;
+}
+small{
+	font-size: 0.85em;
+}
+
+
 // general typography
 p{
 	margin: rhythm(1, 14px) auto rhythm(2, 14px);
@@ -343,4 +354,329 @@ header{
 	font-size: 10px;
 	padding: 16px;
 	margin-top:24px;
+}
+
+
+
+// HJ DEMO
+body.hj{
+	font-family: 'schoolbook-web', Arial, Sans;
+	color: #333;
+	// font-family: 'freight-text-pro', Arial, Sans;
+	// font-size: 18px;
+	// line-height: 1.8em;
+	@include adjust-font-size-to(16px);
+	@include adjust-leading-to(4);
+	@media (min-width: $screen-sm){
+		@include adjust-font-size-to(18px);
+		@include adjust-leading-to(4);
+	}
+	header h1{
+		font-family: 'prenton', Arial, Sans;
+		font-weight: 700;
+		font-size: 14px;
+		letter-spacing: 0;
+	}
+	#project-banner{
+		text-align: center;
+		padding-top: 0;
+	}
+	#project-banner h1{
+		font-family: 'prenton', Arial, Sans;
+		font-weight: 500;
+		text-align: center;
+		font-size: 28px;
+		letter-spacing: 2px;
+		line-height: 1.3em;
+		text-transform: uppercase;
+		
+		// -webkit-font-smoothing: subpixel-antialiased;
+		@media (min-width: $screen-sm){
+			font-size: 56px;	
+			bottom: 88px;
+			display: block;
+			width: 100%;
+		}
+	}
+	#project-banner h2{
+		font-family: 'prenton', Arial, Sans;
+		font-weight: 500;
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 12px;
+		margin-bottom: 24px;
+		letter-spacing: 6px;
+		line-height: 1.3em;
+		text-transform: uppercase;
+		// -webkit-font-smoothing: subpixel-antialiased;
+		@media (min-width: $screen-sm){
+			font-size: 18px;
+			position: absolute;
+			bottom: 32px;
+			color: #fff;
+		}	
+	}
+	h2,h3,h4{
+		font-family: 'prenton', Arial, Sans;
+		font-weight: 700;
+	}
+	h2{
+		@include adjust-font-size-to(16px);
+		@include adjust-leading-to(4);
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 2px;
+	}
+	h3{
+		@include adjust-font-size-to(14px);
+		@include adjust-leading-to(4);
+		text-transform: none;
+		font-weight: 700;
+		letter-spacing: 0px;
+		text-align: left;
+		padding-left: 0;
+		color: #222;
+	}
+
+	section{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.intro section{
+		padding-top: 10px;
+	}
+	.recommendations{
+		background: #A00202;
+		color: #fff;
+		a{
+			color: #ECE8C7;
+			&:hover{
+				color: #fff;
+			}
+		}
+	}
+	.design{
+		background: #A00202;
+		color: #fff;
+		a{
+			color: #ECE8C7;
+			&:hover{
+				color: #fff;
+			}
+		}
+	}
+	.photography{
+		background: #333 url(../images/photos-bg.jpg);
+		background-attachment:fixed;
+		background-size: cover;
+		color: #fff;
+		@media (min-width: $screen-sm){
+			// min-height: 1000px;
+		}
+	}
+	figcaption{
+		font-style: italic;
+		color: #999;
+		font-size: 0.85em;
+	}
+
+	// example design stuff
+	&.example{
+		@media (min-width: $screen-sm){
+		  	@include adjust-font-size-to(12px);
+	  		@include adjust-leading-to(4);
+	  	}
+	  	@media (min-width: $screen-md){
+		  	@include adjust-font-size-to(16px);
+	  		@include adjust-leading-to(4);
+	  	}
+		#project-banner{
+			background: url("../images/hj-example-cover.jpg") no-repeat center center fixed;
+			background-attachment:fixed;
+			background-size: cover;
+			height: 340px;
+			@media (min-width: $screen-sm){
+				height: 600px;
+			}
+			position: relative;
+			.banner-content{
+				height: 100%;
+				position: relative;
+			}
+			h1{
+				top: 50%;
+				position: absolute;
+				color: #fff;
+				left: auto;
+				width: 100%;
+				padding: 0;
+			}
+			h2{
+				top: 50%;
+				margin-top: 70px;
+				position: absolute;
+				color: #fff;
+			}
+		}
+		.main-nav{
+			background: #A00202;
+			padding: 10px 20px;
+			@include clearfix;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			@media (min-width: $screen-sm){
+				position: relative;
+			}
+			img{
+				float: left;
+				margin-right: 20px;
+				display: none;
+				@media (min-width: $screen-md){
+					display: block;
+				}
+			}
+			.nav-btn{
+				display:block;
+				width: 24px;
+				height: 32px;
+				margin-right: 20px;
+				float: left;
+				.line{
+					border-top: 2px solid #fff;
+					margin-top: 6px;
+				}
+				@media (min-width: $screen-md){
+					display: none;
+				}
+			}
+			a.bookings{
+				font-family: 'prenton', Arial, Sans;
+				font-weight: 700;
+				display: block;
+				font-size: 15px;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				color: #fff;
+				text-decoration: none;
+				border: 2px solid #fff;
+				padding: 0 8px;
+				display: inline-block;
+				float: right;
+				margin-top: 0px;
+				display: none;
+				@media (min-width: $screen-md){
+					margin-top: 10px;
+					display: block;
+				}
+			}
+			h1{
+				display: inline-block;
+				color: #fff;
+				font-family: 'prenton', Arial, Sans;
+				letter-spacing:2px;
+				font-size: 18px;
+				text-transform: uppercase;
+				text-align: center;
+				float: left;
+				@media (min-width: $screen-md){
+					display: none;
+				}
+			}
+			nav ul{
+				padding: 0;
+				margin: 10px 0 0 0;
+				display: none;
+				@media (min-width: $screen-md){
+					display: block;
+				}
+				li{
+					float: left;
+					margin: 0;
+					padding: 10px;
+					a{
+						font-family: 'prenton', Arial, Sans;
+						font-weight: 700;
+						display: block;
+						font-size: 15px;
+						letter-spacing: 1px;
+						text-transform: uppercase;
+						color: #fff;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.col{
+			.inner{
+				padding: 40px;
+				text-align: center;
+			}
+			img{
+				width: 100%;
+				height: auto;
+				margin-bottom: -11px;
+			}
+			width: 100%;
+			
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			@media (min-width: $screen-sm){
+				width: 50%;
+				float: left;
+				&.swap-order{
+					float: right;
+				}
+			}
+		}
+		section{
+			padding: 0;
+			@include clearfix;
+			// margin-bottom:-10px;
+			background: #fff;
+			a{
+				font-family: 'prenton', Arial, Sans;
+				font-weight: 500;
+				display: block;
+				font-size: 15px;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				color: #A00202;
+				text-decoration: none;
+				border: 2px solid #A00202;
+				padding: 0 8px;
+				display: inline-block;
+			}
+		}
+		section.about{
+			text-align: center;
+			background: #f5ede4;
+			.inner{
+				max-width: 768px;
+				padding: 40px;
+				margin: 0 auto;
+			}
+		}
+		section.footer{
+			color: #ccc;
+			background: #222;
+			.inner{
+				text-align: left;
+			}
+			font-family: 'prenton', Arial, Sans;
+			b{
+				text-transform: uppercase;
+				font-weight: 700;
+				letter-spacing:1px;
+			}
+		}
+
+	}
+
 }

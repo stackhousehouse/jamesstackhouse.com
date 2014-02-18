@@ -1,0 +1,233 @@
+!!! 5
+
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+-# <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+-# <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+-# <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+-# <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+%html.no-js{:lang => "en"}
+
+    %head
+
+        -# ==========================================================================
+        -# Head
+        -# ==========================================================================
+
+        %meta{:charset => "utf-8"}
+
+        %title HENRY JONES | James Stackhouse
+        %meta{:name => "description", :content => "BBC Academy design and front end development"}
+        -# %meta{:name => "keywords", :content => ""}
+        -# %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        -# ==========================================================================
+
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+        -# %meta{:name => "HandheldFriendly", :content => "True"}
+        -# %meta{:name => "MobileOptimized", :content => "320"}
+
+        -# iOS web app
+
+        -# %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
+        -# %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
+        -# %link{:rel => "apple-touch-startup-image", :href => "/img/touch/startup.png"}
+
+        -# RSS
+        -# ==========================================================================
+
+        -# %link{:rel => "alternate", :type => "application/rss+xml", :title => "RSS", :href => "http://feeds.feedburner.com/FEEDNAME"}
+
+        -# Favicon
+        -# ==========================================================================
+
+        %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+
+        -# iPad 3 Retina Display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "144x144", :href => "/img/touch/apple-touch-icon-144x144-precomposed.png"}
+
+        -# iPhone 4 Retina display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "114x114", :href => "/img/touch/apple-touch-icon-114x114-precomposed.png"}
+
+        -# iPad non-Retina display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "72x72", :href => "/img/touch/apple-touch-icon-72x72-precomposed.png"}
+
+        -# Non-Retina iPhone, iPod Touch, Android 2.1+
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :href => "/img/touch/apple-touch-icon-57x57-precomposed.png"}
+
+        -# Nokia
+
+        -# %link{:rel => "shortcut icon", :href => "/img/touch/apple-touch-icon.png"}
+
+        -# CSS
+        -# ==========================================================================
+
+        %script{:src => "//use.typekit.net/pdo0erq.js"}
+        :javascript
+            try{Typekit.load();}catch(e){}
+
+        %link{:rel => "stylesheet", :href => "../stylesheets/screen.css"}
+        -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "/css/widescreen.css"}
+
+        -# IE Fixes
+        -# ==========================================================================
+
+        -#
+        -# Use HTML5 Shim polyfill if not using Modernizr
+        -# Compiled IE stylesheets for legacy IE "Mobile first" support (using SASS)
+        -# nicolasgallagher.com/mobile-first-css-sass-and-ie/
+        -#
+
+        -# /[if (lt IE 9) & (!IEMobile)]
+            -# %script{:src => "//html5shim.googlecode.com/svn/trunk/html5.js"}
+            -# %script{:src => "/js/libs/selectivizr.min.js"}
+            -# %link{:rel => "stylesheet", :href => "/css/oldie.css"}
+            -# %link{:rel => "stylesheet", :href => "/css/ie8.css"}
+
+        -# [if (lt IE 8) & (!IEMobile)]
+            %link{:rel => "stylesheet", :href => "/stylesheets/ie.css"}
+
+        -# [if IE 6 & (!IEMobile)]
+            %link{:rel => "stylesheet", :href => "/stylesheets/ie.css"}
+
+        -# JS
+        -# ==========================================================================
+        :javascript
+            document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';
+            
+    %body.hj
+
+        -# ==========================================================================
+        -# Content
+        -# ==========================================================================
+
+        -# = yield
+        %header
+            %a{href:"/"}
+                %h1
+                    Stack
+                    %br
+                    House
+        %section#project-banner
+            %img{src:"../images/hj.jpg"}
+            .banner-content
+                %h1 The Henry Jones
+                %h2 Web Redesign
+        .intro.content
+            %section
+                %p The first Henry Jones website tried to recreate the feeling of the hotel through image, music, animation and copy.
+                %p For its time it was a great site. But the web has moved on since then. The iPhone and iPad killed off the Flash technology that powered it. Users became less interested in fancy animated introductions and more interested in quickly locating key information, instantly booking online, or viewing and sharing photos.
+                %p The site in its current form does work without the use of Flash which is great for modern web users. And it does support quick booking online. Compared to current design trends however, it feels a little bloated with pages and has lost some of the craft and ambition that represents the Henry Jones.
+                %p
+                    %i Following are some brief recommendations to keep in mind during the redesign.
+        .recommendations.content    
+            %section
+                %h2 Design Recommendations
+                %p The new Henry Jones website design should be beautifully crafted with finest attention to detail. Both visually and in user experience. If possible using technologies such as HTML5, CSS3 and Javascript. Website features should degrade gracefully for older browsers such as Internet Explorer 8.
+                %p
+                    Imagery should play a big part in the redesign. Care should be taken to choose images that communicate the feeling of the hotel and surrounds. Images should be worthy of being shared on platforms like Pinterest or Tumblr. Steer clear of image 
+                    %a{href:"http://shouldiuseacarousel.com/"}carousels
+                    if possible.
+                %p
+                    Key information should always be accessible. The phone number, address, and bookings button should always be on hand. Information architecture should be simplified. Many sections could be combined into one page. Don't worry about long pages, 
+                    %a{href:'http://bokardo.com/archives/scrolling-easier-clicking/'}scrolling is easier than clicking.
+                %p The new site layout should be fully responsive using CSS3 Media Queries. The mobile and tablet audience cannot be ignored in 2014, and the experience should be as good on mobile as it is on desktop.
+        .typography.content    
+            %section
+                %h2 Typography
+                %p The styleguide suggests the use of Gill Sans for headings and body copy. While Gill Sans is a fantastic font it I don't think it really renders very well for on-screen use.
+            %figure
+                %img{src: "../images/font.png"}
+                %figcaption
+                    Gill Sans renders with rough edges on-screen
+            %section
+                %p 
+                    I would suggest setting type in 
+                    %a{href:'https://typekit.com/fonts/prenton'} Prenton
+                    and 
+                    %a{href:'https://typekit.com/fonts/schoolbook-web'} Schoolbook.
+                    Prenton is inspired by Gill Sans and shares many properties. Schoolbook is great for body copy and compliments Prenton perfectly. These fonts are available through 
+                    %a{href:'https://typekit.com'} Typekit
+                    and optimised for screen use.
+                %p
+                    %small
+                        %i
+                            Note: This page is set in Prenton and Schoolbook...
+            %figure
+                %img{src: "../images/prenton.png"}
+                %figcaption
+                    Prenton renders well on-screen
+        .photography.content   
+            %section
+                %h2 Photography
+                %p
+                    New photography should be a healthy mix of hero shots, design details and the surrounding area. The style should be authentic, not too polished. If models are used care should be taken to make scenes natural. Like something you might see in
+                    %a{href:'http://www.wallpaper.com/travel'} Wallpaper
+                    magazine.
+                %p
+                    I suggest contacting 
+                    %a{href:'http://www.moniquemalone.com/'}Monique Malone
+                    for new photography. She has a wonderful eye for capturing evocative images and works with film, so they have a very authentic feel. She's put together a board of images to give an idea of style 
+                    %a{href:'http://www.moniquemalone.com/HENRY-JONES-Lifestyle'}here.
+                    More of her work can be seen at 
+                    %a{href:'http://www.huntsmanstudio.com/'} Huntsman Studio.
+        .ia.content    
+            %section
+                %h2 Information architecture &amp; Content
+                %h3 About section
+                %p Many of the pages in the About section only contain a paragraph or two. In order to simplify the site's content I suggest the History of the Harbourside and Henry Jones be combined into one long form article. It could be renamed 'Our Story.'
+                %p The General Manager's welcome, if needed, could be simplified into a welcoming sentence on the home page.
+                %p The Newsletter signup form should be moved to the homepage and perhaps in the footer of each page.
+                %h3 Art section
+                %p The art section seems chaotic. I'd suggest a reordering of navigation at very least. Art at the Henry Jones, Tasmanian College of the Arts, and Collect Art Purchase Scheme could be combined to one page with more concise copy. That single page could also contain the current exhibition. Leaving only navigation items to browse the categories of art on display.
+                %h3 Stay section
+                %p This section is fine but I think the first 'Accommodation' item could be dropped from the navigation.
+                %h3 Dine section
+                %p This section could be better served with a name like 'Eat &amp; Drink' as it includes bar spaces as well. The Simple Word could easily be combined into the copy for the IXL Long Bar. 
+                %p After clicking the top level navigation a page needs to be created introducing the options rather than linking directly to Henry's Restaurant.
+                %h3 Explore section
+                %p The content in this section is fine, but like the Dine section, could use a page introducing the options rather than linking directly to Art Tours.
+                %h3 Meetings, Weddings &amp; Events section
+                %p Like the About section this contains many pages with only about a paragraph of text in each. I think this section could benefit from being combined into one longer form article. 
+                %h3 Awards?
+                %p There used to be much fuss made about accolades and awards. Is this no longer important?
+        .design.content    
+            %section
+                %h2 A Responsive Design Example
+                %p 
+                    %a{href:'example.html'} Here's a very rough bootstrapped homepage example
+                    demonstrating how a responsive layout might work for the Henry Jones. Images and text are placeholders.
+            %figure
+                %img{src: "../images/example.png"}
+                %figcaption
+                    / %a{href:'example.html'} Live demo
+
+            / %figure
+            /     %img{src: "images/academy3.png"}
+            /     %figcaption
+            /         Editors are able to promote content in the navigation at the college and category level. We used a panel-based approach to display the large variety of categories and subcategories throughout the colleges to reduce the need to click through to category pages.
+           
+        
+        %footer#footer
+            %small © 2014 \ James Stackhouse       
+        
+        -# jQuery
+
+        %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+        :javascript
+            window.jQuery || document.write('<script src="/js/jquery-1.7.2.min.js"><\/script>')
+
+        -# Custom JS
+        %script{:src => "/js/app-ck.js"}
+        
+        :javascript
+            var _gaq=[['_setAccount','UA-47537665-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));

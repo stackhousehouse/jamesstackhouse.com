@@ -17,8 +17,8 @@
 
         %meta{:charset => "utf-8"}
 
-        %title Fahan School | James Stackhouse
-        %meta{:name => "description", :content => "Fahan School design and development"}
+        %title EXAMPLE HENRY JONES DESIGN  | James Stackhouse
+        %meta{:name => "description", :content => "BBC Academy design and front end development"}
         -# %meta{:name => "keywords", :content => ""}
         -# %meta{:name => "author", :content => ""}
 
@@ -68,8 +68,11 @@
         -# CSS
         -# ==========================================================================
 
-        %link{:rel => "stylesheet", :href => "//cloud.typography.com/7131052/621764/css/fonts.css"}
-        %link{:rel => "stylesheet", :href => "stylesheets/screen.css"}
+        %script{:src => "//use.typekit.net/pdo0erq.js"}
+        :javascript
+            try{Typekit.load();}catch(e){}
+
+        %link{:rel => "stylesheet", :href => "../stylesheets/screen.css"}
         -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "/css/widescreen.css"}
 
         -# IE Fixes
@@ -98,69 +101,92 @@
         :javascript
             document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';
             
-    %body
+    %body.hj.example
 
         -# ==========================================================================
         -# Content
         -# ==========================================================================
 
         -# = yield
-        %header
-            %a{href:"/"}
-                %h1
-                    Stack
-                    %br
-                    House
+        / %header
+        /     %a{href:"/"}
+        /         %h1
+        /             Stack
+        /             %br
+        /             House
         %section#project-banner
-            %img{src:"images/fahan-banner.jpg"}
             .banner-content
-                %h1 Fahan School
-        .content
-            %section.meta
-                %a{href:"http://fahan.tas.edu.au"} View Project
-                %dl
-                    %dt Role:
-                    %dd Design.
-                    %dd Front-end.
-            %section
-                %p Way back in 2010 my good old friend and collegue Adam Hill were asked to give the Fahan School's website a refresh. 
-            %figure
-                %img{src: "images/fahan.png"}
-            %section
-                %p We worked closely with the school to develop information architecture and range of templates that supported the needs of returnig parents, teachers and students as well as parents interested in sending their daughters to study at Fahan.
-                %p We also developed a custom Rails based CMS.
-                %p It's held up really well for a 4 year old site, and we're hoping to give it the responsive treatment soon.
-            %figure
-                %img{src: "images/fahan2.png"}
-        .content.list.continue
-            %section
-                %h3 Selected Work
-                %article
-                    %a{href:"academy.html"}
-                        %img{src:"images/academy-thumb.jpg", alt: "BBC Academy"}
-                        %h1 BBC Academy
-                %article
-                    %a{href:"gel.html"}
-                        %img{src:"images/gel-thumb.jpg", alt: "BBC GEL"}
-                        %h1 BBC GEL
-                %article
-                    %a{href:"awm.html"}
-                        %img{src:"images/awm-thumb.jpg", alt: "Australian War Memorial, London"}
-                        %h1 Australian War Memorial, London
-                %article
-                    %a{href:"fahan.html"}
-                        %img{src:"images/fahan-thumb.jpg", alt: "Fahan School"}
-                        %h1 Fahan School
-                %article
-                    %a{href:"mmft.html"}
-                        %img{src:"images/mmft-thumb.jpg", alt: "BBC Major Music Festivals"}
-                        %h1 BBC Major Music Festivals
-                %article
-                    %a{href:"listening.html"}
-                        %img{src:"images/listen-thumb.jpg", alt: "BBC Listening Project"}
-                        %h1 BBC Listening Project        
-        %footer#footer
-            %small © 2014 \ James Stackhouse       
+                %h1 The Henry Jones
+                %h2 ART HOTEL
+        .main-nav.sticky
+            .nav-btn
+                .line
+                .line
+                .line
+            %h1 Henry Jones
+            %img{src:"../images/hj-round-logo.png"}
+            %nav
+                %ul
+                    %li
+                        %a{href:"#"} Our Story
+                    %li
+                        %a{href:"#"} Stay
+                    %li
+                        %a{href:"#"} Art
+                    %li
+                        %a{href:"#"} Eat &amp; Drink
+                    %li
+                        %a{href:"#"} Explore
+                    %li
+                        %a{href:"#"} Events
+                    %li
+                        %a{href:"#"} Contact
+            %a.bookings{href:"#"} Bookings    
+        %section.full.about
+            .inner
+                %h2 The Story
+                %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia...
+                %a{href:"#{}"} More
+        %section.2col.stay
+            .col
+                %img{src:"../images/hj-stay.jpg"}
+            .col
+                .inner
+                    %h2 Stay
+                    %p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                    %a{href:"#{}"} The Suites
+        %section.2col.art
+            .col.swap-order
+                %img{src:"../images/hj-art.jpg"}
+            .col
+                .inner
+                    %h2 Art
+                    %p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                    %a{href:"#{}"} View Art
+            
+        %section.2col.footer
+            .col
+                %img{src:"../images/hj-map.jpg"}
+            .col
+                .inner
+                    %h2 Contact
+                    %p 25 Hunter Street, Hobart, Tasmania, Australia, 7000
+                    %p
+                        %b Phone: 
+                        03 6210 7700 
+                    %p 
+                        %b Int: 
+                        +61 3 6210 7700
+                    %p 
+                        %b Fax:
+                        03 6210 7755
+                    %p 
+                        %b Email:
+                        reservations@thehenryjones.com
+                    
+                    %a{href:"https://twitter.com/TheHenryJones", class:"twitter-follow-button",} Follow @TheHenryJones
+                    :javascript
+                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs')
         
         -# jQuery
 
